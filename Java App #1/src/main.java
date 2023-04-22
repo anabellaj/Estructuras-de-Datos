@@ -13,6 +13,7 @@ public class main {
      */
     public static void main(String[] args) {
         System.out.println("hello beautiful world");
-        System.out.println("goodbye, please work")
+        System.out.println("goodbye, please work");
+        System.out.println("YES")
     }
 }
