@@ -19,7 +19,12 @@ public class Main {
         for (int i = 0; i<10; i++) {
             list.insertFinal(i);
         }
+        list.insertInIndex(11);
+        list.deleteFinal();
+        list.deleteFinal();
+        list.deleteBegin();
+        list.deleteInIndex(2);
+        list.deleteInIndex(6);
         list.printList();
-    }
-    
+    }   
 }
