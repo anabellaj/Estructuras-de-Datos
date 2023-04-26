@@ -10,19 +10,19 @@ package lista;
  */
 public class Lista {
     
-    private Nodos head;
+    private Nodo head;
     private int length;
 
-    public Lista(Nodos head) {
-        this.head = head;
+    public Lista() {
+        this.head = null;
         this.length = 0;
     }
 
-    public Nodos getHead() {
+    public Nodo getHead() {
         return head;
     }
 
-    public void setHead(Nodos head) {
+    public void setHead(Nodo head) {
         this.head = head;
     }
     
@@ -31,21 +31,47 @@ public class Lista {
     }
     
     public void insertBegin(int element){
-        Nodos node = new Nodos (element);
+        Nodo node = new Nodo (element);
         if (isEmpty()){
-            setHead(head: node);
-            length++;
+            setHead(node);
         }else{
             node.setNext(getHead());
-            setHead(Nodos);
-            length++;
+            setHead(node);
         }
+        length++;
     }
     
+    public void insertFinal(int element){
+        Nodo node = new Nodo (element);
+        if (isEmpty()){
+            setHead(node);
+        } else{
+            Nodo pointer = getHead();
+            while (pointer.getNext() != null){
+                pointer = pointer.getNext();
+            }
+            pointer.setNext(node);
+        }
+        length++;
+    }
+    
+    public void insertInIndex(int element){
+        Nodo node = new Nodo (element);
+        if (isEmpty()){
+            setHead(node);
+        } else{
+          Nodo pointer = getHead();
+          while (pointer.getNext() != null){
+              pointer = pointer.getNext();
+          }
+          pointer.setNext(node);
+        }
+        length++;
+    }
     public void printList(){
-        Nodos pointer = getHead();
+        Nodo pointer = getHead();
         while (pointer != null){
-            System.out.println("[ "+pointer.getElement()+" ]");
+            System.out.print("[ "+pointer.getElement()+" ]");
             pointer = pointer.getNext();
         }
     }
