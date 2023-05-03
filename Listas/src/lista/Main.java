@@ -19,7 +19,7 @@ public class Main {
         for (int i = 0; i<10; i++) {
             list.insertFinal(i);
         }
-        list.insertInIndex(11);
+        list.insertInIndex(11,5);
         list.deleteFinal();
         list.deleteFinal();
         list.deleteBegin();

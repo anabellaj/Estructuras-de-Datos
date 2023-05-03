@@ -63,7 +63,7 @@ public class Lista {
             if (index<length){
                 Nodo pointer = getHead();
                 int cont = 0;
-                while (cont<index-1 && pointer != null){
+                while (cont<(index-1) && pointer != null){
                     pointer = (Nodo) pointer.getNext();
                     cont++;
                 }
@@ -73,7 +73,7 @@ public class Lista {
                 System.out.println("Error in index");
             }
         }
-        length++;
+       // length++;
     }
     
     public Nodo deleteFinal(){
